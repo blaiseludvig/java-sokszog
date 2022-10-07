@@ -1,5 +1,7 @@
 package hu.petrik.szokszog_oop;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Teglalap extends Sokszog implements Sokszog.AsciiArt {
     protected double b;
 
@@ -22,6 +24,16 @@ public class Teglalap extends Sokszog implements Sokszog.AsciiArt {
         this.b = b;
 
         ervenyesit();
+
+    }
+
+    public Teglalap() {
+        super(0);
+        // a nextDouble() alsó értéke inklúzív, ezért lehet 0
+        do {
+            this.a = ThreadLocalRandom.current().nextDouble(0, 10);
+            this.b = ThreadLocalRandom.current().nextDouble(0, 10);
+        } while (!isErvenyes());
 
     }
 
