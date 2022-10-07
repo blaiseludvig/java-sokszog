@@ -29,16 +29,18 @@ public class Haromszog extends Sokszog {
 
     @Override
     public double getKerulet() {
-        return 0;
+        return a + b + c;
     }
 
     @Override
     public double getTerulet() {
-        return 0;
+        double s = (a + b + c) / 2.0;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return String.format("a: %.2f b: %.2f c: %.2f K: %.2f T: %.2f", a, b, c, getKerulet(), getTerulet());
+
     }
 }
