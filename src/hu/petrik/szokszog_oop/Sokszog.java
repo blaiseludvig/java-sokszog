@@ -1,7 +1,15 @@
 package hu.petrik.szokszog_oop;
 
 public abstract class Sokszog {
-    public double a;
+    public class ErvenytelenSokszogException extends IllegalArgumentException {
+        public ErvenytelenSokszogException() {
+            super(String.format("A(z) %s érvénytelen!", getMegnevezes()));
+        }
+    }
+
+    public abstract String getMegnevezes();
+
+    protected double a;
 
     public Sokszog(double a) {
         this.a = a;
@@ -13,6 +21,17 @@ public abstract class Sokszog {
 
     public void setA(double a) {
         this.a = a;
+        if (!isErvenyes()) {
+            throw new ErvenytelenSokszogException();
+        }
+    }
+
+    protected abstract boolean isErvenyes();
+
+    protected void ervenyesit() {
+        if (!isErvenyes()) {
+            throw new ErvenytelenSokszogException();
+        }
     }
 
     public abstract double getKerulet();
