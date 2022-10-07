@@ -2,7 +2,7 @@ package hu.petrik.szokszog_oop;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Haromszog extends Sokszog {
+public class Haromszog extends Sokszog implements Sokszog.AsciiArt {
 
     protected double b;
     protected double c;
@@ -75,6 +75,19 @@ public class Haromszog extends Sokszog {
     @Override
     public double getTerulet() {
         return Math.sqrt(getS() * (getS() - a) * (getS() - b) * (getS() - c));
+    }
+
+    @Override
+    public String getAsciiArt() {
+        return ""
+                + "     /\\\n"
+                + "    /  \\\n"
+                + "   /    \\\n"
+                + "a /      \\ b\n"
+                + " /        \\\n"
+                + "/          \\\n"
+                + "------------\n"
+                + "     c      \n";
     }
 
     @Override

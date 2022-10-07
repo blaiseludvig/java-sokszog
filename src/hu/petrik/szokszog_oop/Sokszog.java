@@ -38,6 +38,10 @@ public abstract class Sokszog {
 
     public abstract double getTerulet();
 
+    protected interface AsciiArt {
+        String getAsciiArt();
+    }
+
     @Override
     public String toString() {
         return String.format("K: %.2f T: %.2f", getKerulet(), getTerulet());

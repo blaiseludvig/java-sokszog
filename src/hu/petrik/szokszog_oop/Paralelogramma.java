@@ -2,7 +2,7 @@ package hu.petrik.szokszog_oop;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Paralelogramma extends Sokszog {
+public class Paralelogramma extends Sokszog implements Sokszog.AsciiArt {
     protected double h;
 
     // paralelogramma oldalának hossza
@@ -86,6 +86,16 @@ public class Paralelogramma extends Sokszog {
     @Override
     public double getTerulet() {
         return a * h;
+    }
+
+    public String getAsciiArt() {
+        return ""
+                + "             a          \n"
+                + "   *-------------------*\n"
+                + "  /|                A /\n"
+                + " / | h               / b\n"
+                + "/  |                /\n"
+                + "*--+----------------*\n";
     }
 
     @Override

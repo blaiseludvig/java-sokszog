@@ -7,5 +7,6 @@ public class Main {
         System.out.println(new Haromszog());
         System.out.println(new Teglalap(10, 4));
         System.out.println(new Paralelogramma(4, 4, 30));
+        System.out.println(new DerekszoguHaromszog(12, 4));
     }
 }

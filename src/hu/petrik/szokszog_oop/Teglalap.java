@@ -1,6 +1,6 @@
 package hu.petrik.szokszog_oop;
 
-public class Teglalap extends Sokszog {
+public class Teglalap extends Sokszog implements Sokszog.AsciiArt {
     protected double b;
 
     @Override
@@ -42,6 +42,17 @@ public class Teglalap extends Sokszog {
     @Override
     public double getTerulet() {
         return a * b;
+    }
+
+    @Override
+    public String getAsciiArt() {
+        return ""
+                + "      a      \n"
+                + "+-----------+\n"
+                + "|           |\n"
+                + "|           | b\n"
+                + "|           |\n"
+                + "+-----------+\n";
     }
 
     @Override
