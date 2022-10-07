@@ -1,4 +1,4 @@
-package hu.petrik.template_project;
+package hu.petrik.szokszog_oop;
 
 public class Main {
 
