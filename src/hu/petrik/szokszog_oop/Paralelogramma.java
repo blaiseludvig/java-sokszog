@@ -100,6 +100,6 @@ public class Paralelogramma extends Sokszog implements Sokszog.AsciiArt {
 
     @Override
     public String toString() {
-        return String.format("a: %.2f b: %.2f K: %.2f T: %.2f", a, this.getB(), getKerulet(), getTerulet());
+        return String.format("%s: a: %.2f b: %.2f K: %.2f T: %.2f", getMegnevezes(), a, this.getB(), getKerulet(), getTerulet());
     }
 }

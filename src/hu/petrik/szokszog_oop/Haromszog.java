@@ -92,7 +92,7 @@ public class Haromszog extends Sokszog implements Sokszog.AsciiArt {
 
     @Override
     public String toString() {
-        return String.format("a: %.2f b: %.2f c: %.2f K: %.2f T: %.2f", a, b, c, getKerulet(), getTerulet());
+        return String.format("%s: a: %.2f b: %.2f c: %.2f K: %.2f T: %.2f", getMegnevezes(), a, b, c, getKerulet(), getTerulet());
 
     }
 }
